@@ -10,6 +10,11 @@ gem 'devise'
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 
+gem 'sassc', '~> 2.0.0'
+gem 'uglifier'
+gem 'jquery-rails'
+gem 'bootstrap'
+
 # Bootstrap
 gem 'devise-bootstrap-views', '~> 1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

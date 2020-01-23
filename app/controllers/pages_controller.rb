@@ -5,13 +5,6 @@ class PagesController < ApplicationController
   def devise_test
   end  
   
-  def log_out
-    log_out if user_signed_in?
-    User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
-    redirect_to pages/index
-  end
-
   def index
   end
 end
