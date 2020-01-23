@@ -3,10 +3,11 @@ class CreateCompanies < ActiveRecord::Migration[6.0]
     create_table :companies do |t|
       t.string :name
       t.text :address
-      t.integer :telephone_number
+      t.string :telephone_number
       t.string :mail_address
-      t.time :open
-      t.time :close
+      t.integer :off
+      t.datetime :open
+      t.datetime :close
       t.boolean :emergency
       t.text :remarks
 
