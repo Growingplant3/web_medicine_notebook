@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_23_141526) do
+ActiveRecord::Schema.define(version: 2020_01_23_160657) do
 
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "address"
-    t.integer "telephone_number"
+    t.string "telephone_number"
     t.string "mail_address"
-    t.time "open"
-    t.time "close"
+    t.integer "off", limit: 1, default: 0, null: false
+    t.datetime "open"
+    t.datetime "close"
     t.boolean "emergency"
     t.text "remarks"
     t.datetime "created_at", precision: 6, null: false

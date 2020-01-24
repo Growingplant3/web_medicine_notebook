@@ -30,9 +30,9 @@
         <td><%= company.close %></td>
         <td><%= company.emergency %></td>
         <td><%= company.remarks %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '表示する', company %></td>
+        <td><%= link_to '変更する', edit_company_path(company) %></td>
+        <td><%= link_to '削除する', company, method: :delete, data: { confirm: '本当に削除しても良いですか?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Company', new_company_path %>
+<%= link_to '新規登録', new_company_path %>

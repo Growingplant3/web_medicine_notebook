@@ -1,44 +1,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>病院名:</strong>
   <%= @company.name %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>住所:</strong>
   <%= @company.address %>
 </p>
 
 <p>
-  <strong>Telephone number:</strong>
+  <strong>電話番号:</strong>
   <%= @company.telephone_number %>
 </p>
 
 <p>
-  <strong>Mail address:</strong>
+  <strong>メールアドレス:</strong>
   <%= @company.mail_address %>
 </p>
 
 <p>
-  <strong>Open:</strong>
+  <strong>休診日:</strong>
+  <%= @company.off %>
+</p>
+
+<p>
+  <strong>診察開始:</strong>
   <%= @company.open %>
 </p>
 
 <p>
-  <strong>Close:</strong>
+  <strong>診察終了:</strong>
   <%= @company.close %>
 </p>
 
 <p>
-  <strong>Emergency:</strong>
+  <strong>急患対応:</strong>
   <%= @company.emergency %>
 </p>
 
 <p>
-  <strong>Remarks:</strong>
+  <strong>備考:</strong>
   <%= @company.remarks %>
 </p>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to '編集する', edit_company_path(@company) %> |
+<%= link_to '戻る', companies_path %>
