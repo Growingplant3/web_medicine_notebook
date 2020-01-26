@@ -15,6 +15,7 @@ gem 'sassc', '~> 2.0.0'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'bootstrap'
+gem 'enum_help'
 
 # Bootstrap
 gem 'devise-bootstrap-views', '~> 1.0'

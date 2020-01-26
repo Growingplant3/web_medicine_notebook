@@ -3,8 +3,8 @@ class PagesController < ApplicationController
   before_action :authenticate_user! , only: [:devise_test]
 　# devise_page create
   def devise_test
-  end  
-  
+  end
+
   def index
   end
 end
