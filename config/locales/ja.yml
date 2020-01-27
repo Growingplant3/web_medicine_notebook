@@ -205,3 +205,13 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  enums:
+    company:
+      off:
+        sunday: 日曜日
+        monday: 月曜日
+        tuesday: 火曜日
+        wednesday: 水曜日
+        thrusday: 木曜日
+        friday: 金曜日
+        saturday: 土曜日
