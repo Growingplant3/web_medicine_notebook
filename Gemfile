@@ -14,12 +14,13 @@ gem 'devise-i18n'
 gem 'sassc', '~> 2.0.0'
 gem 'uglifier'
 gem 'jquery-rails'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.1.3'
 gem 'enum_help'
 
 # Bootstrap
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'devise-i18n-views'
+gem 'bootstrap-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
