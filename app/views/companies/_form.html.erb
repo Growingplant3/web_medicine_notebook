@@ -28,8 +28,9 @@
 
   <div class="field">
     <%= form.label :休診日 %>
-    <%= select :off,:name,Company.offs.keys.to_a %>
-    <%= select :off,:name,Company.offs.values.to_a %>
+    <%# select :off,:name,Company.offs.keys.to_a %>
+    <%# select :off,:name,Company.offs.values.to_a %>
+    <%= form.select(:off, Company.offs.keys.to_a)  %>
   </div>
 
   <div class="field">
