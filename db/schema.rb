@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_01_23_160657) do
     t.text "address"
     t.string "telephone_number"
     t.string "mail_address"
-    t.integer "off", limit: 1, default: 0, null: false
+    t.integer "holiday", limit: 1, default: 0, null: false
     t.datetime "open"
     t.datetime "close"
     t.boolean "emergency"

@@ -28,9 +28,9 @@
 
   <div class="field">
     <%= form.label :休診日 %>
-    <%# select :off,:name,Company.offs.keys.to_a %>
-    <%# select :off,:name,Company.offs.values.to_a %>
-    <%= form.select(:off, Company.offs.keys.to_a)  %>
+    <%# select :holiday,:name,Company.holidays.keys.to_a %>
+    <%# select :holiday,:name,Company.holidays.values.to_a %>
+    <%= form.select(:holiday, Company.holidays_i18n.keys.map{|k| [I18n.t("enums.company.holiday.#{k}"), k]})  %>
   </div>
 
   <div class="field">
@@ -50,7 +50,7 @@
 
   <div class="field">
     <%= form.label :急患対応 %>
-    <%= form.check_box :emergency %>
+    <%= form.check_box :emergency, {}, "ok", "ng" %>
   </div>
 
   <div class="field">
