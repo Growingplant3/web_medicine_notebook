@@ -6,6 +6,11 @@ gem 'devise'
 
 # ログイン機能
 gem 'devise'
+# 管理者機能
+gem 'rails_admin'
+gem 'cancancan'
+gem 'pry-rails'
+gem 'pry-byebug'
 
 # 日本語化
 gem 'rails-i18n', '~> 6.0'
