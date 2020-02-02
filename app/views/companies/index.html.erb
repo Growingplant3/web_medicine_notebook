@@ -19,7 +19,6 @@
   </thead>
 
   <tbody>
-  require 'date'
     <% @companies.each do |company| %>
       <tr>
         <td><%= company.name %></td>
@@ -27,8 +26,8 @@
         <td><%= company.telephone_number %></td>
         <td><%= company.mail_address %></td>
         <td><%= company.holiday_i18n %></td>
-        <td><%= company.open.strftime("%H時%M分") ></td>
-        <td><%= company.close.strftime("%H時%M分") ></td>
+        <td><%= company.open.strftime("%H:%M") %></td>
+        <td><%= company.close.strftime("%H:%M") %></td>
         <td><%= company.emergency_i18n %></td>
         <td><%= company.remarks %></td>
         <td><%= link_to '表示する', company %></td>

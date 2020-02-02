@@ -27,12 +27,12 @@
 
 <p>
   <strong>診察開始:</strong>
-  <%= @company.open %>
+  <%= @company.open.strftime("%H:%M") %>
 </p>
 
 <p>
   <strong>診察終了:</strong>
-  <%= @company.close %>
+  <%= @company.close.strftime("%H:%M") %>
 </p>
 
 <p>
