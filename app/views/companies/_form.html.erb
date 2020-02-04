@@ -11,6 +11,18 @@
     </div>
   <% end %>
 
+  <h2>Your address</h2>
+  <p>zip code</p>
+  <%= form.text_field :postcode %>
+  <p>prefecture</p>
+  <%= form.text_field :prefecture_code, collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県' %><br>
+  <p>city</p>
+  <%= form.text_field :address_city %>
+  <p>street</p>
+  <%= form.text_field :address_street %>
+  <p>builbding name</p>
+  <%= form.text_field :address_building %>
+  
   <div class="field">
     <%= form.label :病院名 %>
     <%= form.text_field :name %>

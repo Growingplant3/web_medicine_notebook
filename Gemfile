@@ -21,6 +21,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.3'
 gem 'enum_help'
+gem 'jp_prefecture'
 
 # Bootstrap
 gem 'devise-bootstrap-views', '~> 1.0'
