@@ -72,4 +72,8 @@ class CompaniesController < ApplicationController
     def company_params
       params.require(:company).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks)
     end
+
+    def address_params
+      params.require(:address).permit(:zipcode, :prefecture_name, :city, :street, :building)
+    end
 end

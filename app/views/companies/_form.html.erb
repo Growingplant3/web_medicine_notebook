@@ -11,6 +11,9 @@
     </div>
   <% end %>
 
+  <%= form.label :prefecture_id, "都道府県" %><br>
+  <%= form.collection_select :prefecture_id, Company.all, :id, :name, include_blank: true  %>
+
   <div class="field">
     <%= form.label :病院名 %>
     <%= form.text_field :name %>
