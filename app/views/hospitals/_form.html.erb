@@ -42,7 +42,7 @@
     <%= form.label :休診日 %>
     <%# select :holiday,:name,hospital.holidays.keys.to_a %>
     <%# select :holiday,:name,hospital.holidays.values.to_a %>
-    <%= form.select(:holiday, hospital.holidays_i18n.keys.map{|k| [I18n.t("enums.hospital.holiday.#{k}"), k]})  %>
+    <%= form.select(:holiday, Hospital.holidays_i18n.keys.map{|k| [I18n.t("enums.Hospital.holiday.#{k}"), k]})  %>
   </div>
 
   <div class="field">

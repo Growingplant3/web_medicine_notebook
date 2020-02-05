@@ -1,10 +1,10 @@
-class hospitalsController < ApplicationController
+class HospitalsController < ApplicationController
   before_action :set_hospital, only: [:show, :edit, :update, :destroy]
 
   # GET /hospitals
   # GET /hospitals.json
   def index
-    @hospitals = hospital.all
+    @hospitals = Hospital.all
   end
 
   # GET /hospitals/1
@@ -14,18 +14,18 @@ class hospitalsController < ApplicationController
 
   # GET /hospitals/new
   def new
-    @hospital = hospital.new
+    @hospital = Hospital.new
   end
 
   # GET /hospitals/1/edit
   def edit
-    @hospital = hospital.find(params[:id])
+    @hospital = Hospital.find(params[:id])
   end
 
   # POST /hospitals
   # POST /hospitals.json
   def create
-    @hospital = hospital.new(hospital_params)
+    @hospital = Hospital.new(hospital_params)
 
     respond_to do |format|
       if @hospital.save
@@ -65,7 +65,7 @@ class hospitalsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_hospital
-      @hospital = hospital.find(params[:id])
+      @hospital = Hospital.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
