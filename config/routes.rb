@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :telphones
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'companies/test'
   get 'companies/:id/edit' => 'companies#edit'
