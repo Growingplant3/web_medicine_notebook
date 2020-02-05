@@ -1,2 +1,2 @@
-module CompaniesHelper
+module HospitalsHelper
 end

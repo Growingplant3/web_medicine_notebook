@@ -10,25 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_05_143431) do
+ActiveRecord::Schema.define(version: 2020_02_05_150910) do
 
-  create_table "Hospitals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.text "address"
-    t.string "telephone_number"
-    t.string "mail_address"
-    t.integer "holiday", limit: 1, default: 0, null: false
-    t.datetime "open"
-    t.datetime "close"
-    t.boolean "emergency"
-    t.text "remarks"
+  create_table "hospitals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "postcode"
-    t.integer "prefecture_code"
-    t.string "address_city"
-    t.string "address_street"
-    t.string "address_building"
   end
 
   create_table "telphones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

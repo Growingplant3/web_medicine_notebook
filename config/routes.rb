@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   resources :telphones
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'companies/test'
-  get 'companies/:id/edit' => 'companies#edit'
+  get 'hospitals/test'
+  get 'hospitals/:id/edit' => 'hospitals#edit'
   root "pages#index"
   devise_for :users
   get 'pages/index'
   get 'pages/devise_test'
-  resources :companies
+  resources :hospitals
 end

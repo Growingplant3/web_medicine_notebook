@@ -3,7 +3,7 @@ ja:
     models:
       user: ユーザ情報
     attributes:
-      company:
+      hospital:
         emergency: 急患対応
   enums:
     user:

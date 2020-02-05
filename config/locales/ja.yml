@@ -206,7 +206,7 @@ ja:
       short: "%m/%d %H:%M"
     pm: 午後
   enums:
-    company:
+    hospital:
       holiday:
         sunday: "日曜日"
         monday: "月曜日"

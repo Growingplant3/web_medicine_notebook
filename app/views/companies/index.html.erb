@@ -19,20 +19,20 @@
   </thead>
 
   <tbody>
-    <% @companies.each do |company| %>
+    <% @hospitals.each do |hospital| %>
       <tr>
-        <td><%= company.name %></td>
-        <td><%= company.address %></td>
-        <td><%= company.telephone_number %></td>
-        <td><%= company.mail_address %></td>
-        <td><%= company.holiday_i18n %></td>
-        <td><%= company.open.strftime("%H:%M") %></td>
-        <td><%= company.close.strftime("%H:%M") %></td>
-        <td><%= company.emergency_i18n %></td>
-        <td><%= company.remarks %></td>
-        <td><%= link_to '表示する', company %></td>
-        <td><%= link_to '変更する', edit_company_path(company) %></td>
-        <td><%= link_to '削除する', company, method: :delete, data: { confirm: '本当に削除しても良いですか?' } %></td>
+        <td><%= hospital.name %></td>
+        <td><%= hospital.address %></td>
+        <td><%= hospital.telephone_number %></td>
+        <td><%= hospital.mail_address %></td>
+        <td><%= hospital.holiday_i18n %></td>
+        <td><%= hospital.open.strftime("%H:%M") %></td>
+        <td><%= hospital.close.strftime("%H:%M") %></td>
+        <td><%= hospital.emergency_i18n %></td>
+        <td><%= hospital.remarks %></td>
+        <td><%= link_to '表示する', hospital %></td>
+        <td><%= link_to '変更する', edit_hospital_path(hospital) %></td>
+        <td><%= link_to '削除する', hospital, method: :delete, data: { confirm: '本当に削除しても良いですか?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +40,4 @@
 
 <br>
 
-<%= link_to '新規登録', new_company_path %>
+<%= link_to '新規登録', new_hospital_path %>

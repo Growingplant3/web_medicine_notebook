@@ -2,48 +2,48 @@
 
 <p>
   <strong>病院名:</strong>
-  <%= @company.name %>
+  <%= @hospital.name %>
 </p>
 
 <p>
   <strong>住所:</strong>
-  <%= @company.address %>
+  <%= @hospital.address %>
 </p>
 
 <p>
   <strong>電話番号:</strong>
-  <%= @company.telephone_number %>
+  <%= @hospital.telephone_number %>
 </p>
 
 <p>
   <strong>メールアドレス:</strong>
-  <%= @company.mail_address %>
+  <%= @hospital.mail_address %>
 </p>
 
 <p>
   <strong>休診日:</strong>
-  <%= @company.holiday_i18n %>
+  <%= @hospital.holiday_i18n %>
 </p>
 
 <p>
   <strong>診察開始:</strong>
-  <%= @company.open.strftime("%H:%M") %>
+  <%= @hospital.open.strftime("%H:%M") %>
 </p>
 
 <p>
   <strong>診察終了:</strong>
-  <%= @company.close.strftime("%H:%M") %>
+  <%= @hospital.close.strftime("%H:%M") %>
 </p>
 
 <p>
   <strong>急患対応:</strong>
-  <%= @company.emergency_i18n %>
+  <%= @hospital.emergency_i18n %>
 </p>
 
 <p>
   <strong>備考:</strong>
-  <%= @company.remarks %>
+  <%= @hospital.remarks %>
 </p>
 
-<%= link_to '編集する', edit_company_path(@company) %> |
-<%= link_to '戻る', companies_path %>
+<%= link_to '編集する', edit_hospital_path(@hospital) %> |
+<%= link_to '戻る', hospitals_path %>

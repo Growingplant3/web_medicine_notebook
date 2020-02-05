@@ -1,10 +1,10 @@
-<%= form_with(model: company, local: true) do |form| %>
-  <% if company.errors.any? %>
+<%= form_with(model: hospital, local: true) do |form| %>
+  <% if hospital.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+      <h2><%= pluralize(hospital.errors.count, "error") %> prohibited this hospital from being saved:</h2>
 
       <ul>
-        <% company.errors.full_messages.each do |message| %>
+        <% hospital.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -40,9 +40,9 @@
 
   <div class="field">
     <%= form.label :休診日 %>
-    <%# select :holiday,:name,Company.holidays.keys.to_a %>
-    <%# select :holiday,:name,Company.holidays.values.to_a %>
-    <%= form.select(:holiday, Company.holidays_i18n.keys.map{|k| [I18n.t("enums.company.holiday.#{k}"), k]})  %>
+    <%# select :holiday,:name,hospital.holidays.keys.to_a %>
+    <%# select :holiday,:name,hospital.holidays.values.to_a %>
+    <%= form.select(:holiday, hospital.holidays_i18n.keys.map{|k| [I18n.t("enums.hospital.holiday.#{k}"), k]})  %>
   </div>
 
   <div class="field">

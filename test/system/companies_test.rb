@@ -1,57 +1,57 @@
 require "application_system_test_case"
 
-class CompaniesTest < ApplicationSystemTestCase
+class hospitalsTest < ApplicationSystemTestCase
   setup do
-    @company = companies(:one)
+    @hospital = hospitals(:one)
   end
 
   test "visiting the index" do
-    visit companies_url
-    assert_selector "h1", text: "Companies"
+    visit hospitals_url
+    assert_selector "h1", text: "hospitals"
   end
 
-  test "creating a Company" do
-    visit companies_url
-    click_on "New Company"
+  test "creating a hospital" do
+    visit hospitals_url
+    click_on "New hospital"
 
-    fill_in "Address", with: @company.address
-    fill_in "Close", with: @company.close
-    check "Emergency" if @company.emergency
-    fill_in "Mail address", with: @company.mail_address
-    fill_in "Name", with: @company.name
-    fill_in "Open", with: @company.open
-    fill_in "Remarks", with: @company.remarks
-    fill_in "Telephone number", with: @company.telephone_number
-    click_on "Create Company"
+    fill_in "Address", with: @hospital.address
+    fill_in "Close", with: @hospital.close
+    check "Emergency" if @hospital.emergency
+    fill_in "Mail address", with: @hospital.mail_address
+    fill_in "Name", with: @hospital.name
+    fill_in "Open", with: @hospital.open
+    fill_in "Remarks", with: @hospital.remarks
+    fill_in "Telephone number", with: @hospital.telephone_number
+    click_on "Create hospital"
 
-    assert_text "Company was successfully created"
+    assert_text "hospital was successfully created"
     click_on "Back"
   end
 
-  test "updating a Company" do
-    visit companies_url
+  test "updating a hospital" do
+    visit hospitals_url
     click_on "Edit", match: :first
 
-    fill_in "Address", with: @company.address
-    fill_in "Close", with: @company.close
-    check "Emergency" if @company.emergency
-    fill_in "Mail address", with: @company.mail_address
-    fill_in "Name", with: @company.name
-    fill_in "Open", with: @company.open
-    fill_in "Remarks", with: @company.remarks
-    fill_in "Telephone number", with: @company.telephone_number
-    click_on "Update Company"
+    fill_in "Address", with: @hospital.address
+    fill_in "Close", with: @hospital.close
+    check "Emergency" if @hospital.emergency
+    fill_in "Mail address", with: @hospital.mail_address
+    fill_in "Name", with: @hospital.name
+    fill_in "Open", with: @hospital.open
+    fill_in "Remarks", with: @hospital.remarks
+    fill_in "Telephone number", with: @hospital.telephone_number
+    click_on "Update hospital"
 
-    assert_text "Company was successfully updated"
+    assert_text "hospital was successfully updated"
     click_on "Back"
   end
 
-  test "destroying a Company" do
-    visit companies_url
+  test "destroying a hospital" do
+    visit hospitals_url
     page.accept_confirm do
       click_on "Destroy", match: :first
     end
 
-    assert_text "Company was successfully destroyed"
+    assert_text "hospital was successfully destroyed"
   end
 end

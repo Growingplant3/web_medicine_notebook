@@ -1,3 +1,3 @@
 class Telphone < ApplicationRecord
-    belongs_to :Company
+    belongs_to :Hospital
 end
