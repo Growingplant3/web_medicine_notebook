@@ -10,7 +10,7 @@
 $(function(){
     $('input[name="hospital[postcode]"]').jpostal({
         postcode : [
-            '[name="hospital[postcode]]"]',
+            '[name="hospital[postcode]"]',
         ],
         address : {
             '[name="hospital[prefecture_code]"]': "%3",
