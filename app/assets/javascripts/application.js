@@ -5,18 +5,17 @@
 
 //= require jquery
 //= require bootstrap-sprockets
-<<<<<<< HEAD
 
 //= require jquery.jpostal
 $(function(){
-    $('input[name="#address_zipcode"]').jpostal({
+    $('input[name="hospital[postcode]"]').jpostal({
         postcode : [
-            '[name="#address_zipcode"]',
+            '[name="hospital[postcode]]"]',
         ],
         address : {
-            '[name="#address_prefecture_name"]': "%3",
-            '[name="#address_city"]': "%4%5",
-            '[name="#address_street"]': "%6%7"
+            '[name="hospital[prefecture_code]"]': "%3",
+            '[name="hospital[address_city]"]': "%4%5",
+            '[name="hospital[address_street]"]': "%6%7"
         }
     });
 });
