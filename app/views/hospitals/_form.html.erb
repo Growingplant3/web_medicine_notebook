@@ -38,6 +38,10 @@
     <%= form.number_field :telephone_number %>
   </div>
 
+  <% form_tag(:controller => telphones, :action => create) %>
+    <div><%= text_field :title, class: "telphones" %></div>
+  <% end %>
+
   <div class="field">
     <%= form.label :休診日 %>
     <%# select :holiday,:name,hospital.holidays.keys.to_a %>
