@@ -1,5 +1,5 @@
 <%= render 'shared/flash_messages' %>
-<a><"current_user.email">さん、こんにちは!</a>
+<a><%= current_user.email %>さん、こんにちは!</a>
 <div class="row">
 	<div class="col-xs-6 col-md-3">
 		<div class="thumbnail">
@@ -50,11 +50,8 @@
  	<% else %>
 		<div class="page-header">
 	  		<h1>マイページ<br>
-				<small><%= @current_user.name %>さん、こんにちは！</small>
+				<small><%= current_user.email %>さん、こんにちは！</small>
 	  		</h1>
 		</div>
-  			<p>マイページ<br>
-				テスト表示
-  			</p>
 	<% end %>
 </div>
