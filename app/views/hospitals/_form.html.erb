@@ -51,6 +51,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :24時間営業 %>
+    <%= form.check_box :twenty_four, {}, "yes", "no" %>
+  </div>
+
+  <div class="field">
     <%= form.label :診察開始 %>
     <%= form.text_field :open %>
   </div>
