@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 2020_02_08_132224) do
     t.string "telephone_number"
     t.string "mail_address"
     t.integer "holiday"
-    t.datetime "open"
-    t.datetime "close"
     t.boolean "emergency"
     t.text "remarks"
     t.datetime "created_at", precision: 6, null: false
@@ -29,15 +27,9 @@ ActiveRecord::Schema.define(version: 2020_02_08_132224) do
     t.string "address_city"
     t.string "address_street"
     t.string "address_building"
+    t.time "open"
+    t.time "close"
     t.boolean "twenty_four"
-    t.string "open1"
-    t.string "open2"
-    t.string "open3"
-    t.string "open4"
-    t.string "close1"
-    t.string "close2"
-    t.string "close3"
-    t.string "close4"
   end
 
   create_table "telphones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
