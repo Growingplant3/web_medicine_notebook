@@ -219,5 +219,5 @@ ja:
         ng: 不可
         ok: 可
       twenty_four:
-        no: 不可
-        yes: 可
+        incorrect: 不可
+        correct: 可

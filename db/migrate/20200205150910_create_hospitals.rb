@@ -7,8 +7,6 @@ class CreateHospitals < ActiveRecord::Migration[6.0]
       t.string :telephone_number
       t.string :mail_address
       t.integer :holiday
-      t.datetime :open
-      t.datetime :close
       t.boolean :emergency
       t.text :remarks
       t.timestamps

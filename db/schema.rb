@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 2020_02_08_132224) do
     t.text "remarks"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "postcode"
-    t.integer "prefecture_code"
+    t.string "postcode"
+    t.string "prefecture_code"
     t.string "address_city"
     t.string "address_street"
     t.string "address_building"
     t.time "open"
     t.time "close"
-    t.boolean "twenty_four"
+    t.boolean "twenty_four", default: false
   end
 
   create_table "telphones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
