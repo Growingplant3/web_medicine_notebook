@@ -11,27 +11,22 @@
     </div>
   <% end %>
 
-  <h2>Your address</h2>
-  <p>zip code</p>
-  <%= form.text_field :postcode %>
-  <p>prefecture</p>
-  <%= form.text_field :prefecture_code, collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県' %><br>
-  <p>city</p>
-  <%= form.text_field :address_city %>
-  <p>street</p>
-  <%= form.text_field :address_street %>
-  <p>builbding name</p>
-  <%= form.text_field :address_building %>
-  
   <div class="field">
     <%= form.label :病院名 %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :住所 %>
-    <%= form.text_area :address %>
-  </div>
+  <h2>住所</h2>
+  <p>郵便番号</p>
+  <%= form.text_field :postcode %>
+  <p>都道府県</p>
+  <%= form.text_field :prefecture_code, collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県' %><br>
+  <p>市町村</p>
+  <%= form.text_field :address_city %>
+  <p>詳細住所</p>
+  <%= form.text_field :address_street %>
+  <p>建物名など</p>
+  <%= form.text_field :address_building %>
 
   <div class="field">
     <%= form.label :電話番号 %>
@@ -40,8 +35,6 @@
 
   <div class="field">
     <%= form.label :休診日 %>
-    <%# select :holiday,:name,hospital.holidays.keys.to_a %>
-    <%# select :holiday,:name,hospital.holidays.values.to_a %>
     <%= form.select(:holiday, Hospital.holidays_i18n.invert) %>
   </div>
 
