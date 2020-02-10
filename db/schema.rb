@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_10_135128) do
+ActiveRecord::Schema.define(version: 2020_02_10_161402) do
 
   create_table "Hospitals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -54,13 +54,8 @@ ActiveRecord::Schema.define(version: 2020_02_10_135128) do
   end
 
   create_table "vacations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.boolean "sun", default: false
-    t.boolean "mon", default: false
-    t.boolean "tue", default: false
-    t.boolean "wed", default: false
-    t.boolean "thu", default: false
-    t.boolean "fri", default: false
-    t.boolean "sat", default: false
+    t.integer "hospital_id"
+    t.integer "consultation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

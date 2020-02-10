@@ -221,25 +221,3 @@ ja:
       twenty_four:
         incorrect: 不可
         correct: 可
-    vacation:
-      sun:
-        holiday: ×
-        consultation: ◯
-      mon:
-        holida: ×
-        consultatio: ◯
-      tue:
-        holid: ×
-        consultati: ◯
-      wed:
-        holi: ×
-        consultat: ◯
-      thu:
-        hol: ×
-        consulta: ◯
-      fri:
-        ho: ×
-        consult: ◯
-      sat:
-        h: ×
-        consul: ◯
