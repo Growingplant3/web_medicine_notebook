@@ -15,6 +15,7 @@ class HospitalsController < ApplicationController
   # GET /hospitals/new
   def new
     @hospital = Hospital.new
+    @company.build_vacation
   end
 
   # GET /hospitals/1/edit
@@ -70,7 +71,7 @@ class HospitalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hospital_params
-      params.require(:hospital).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks, :postcode, :prefecture_code, :address_city, :address_street, :address_building, :twenty_four, :checkbox,ingredients:[])
+      params.require(:hospital).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks, :postcode, :prefecture_code, :address_city, :address_street, :address_building, :twenty_four, vacation_attributes: [:id, :hospital_id, :consultation])
     end
 
 end
