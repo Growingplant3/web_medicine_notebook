@@ -15,7 +15,8 @@ class HospitalsController < ApplicationController
   # GET /hospitals/new
   def new
     @hospital = Hospital.new
-    @company.build_vacation
+    @hospital.vacations.build
+    # if @hospital.present?
   end
 
   # GET /hospitals/1/edit
@@ -27,6 +28,7 @@ class HospitalsController < ApplicationController
   # POST /hospitals.json
   def create
     @hospital = Hospital.new(hospital_params)
+    @vacation = Vacation.new(vacation_params)
 
     respond_to do |format|
       if @hospital.save
@@ -73,5 +75,4 @@ class HospitalsController < ApplicationController
     def hospital_params
       params.require(:hospital).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks, :postcode, :prefecture_code, :address_city, :address_street, :address_building, :twenty_four, vacation_attributes: [:id, :hospital_id, :consultation])
     end
-
 end
