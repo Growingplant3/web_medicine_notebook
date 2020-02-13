@@ -28,8 +28,9 @@ class HospitalsController < ApplicationController
   # POST /hospitals.json
   def create
     @hospital = Hospital.new(hospital_params)
-    @vacation = Vacation.new(vacation_params)
-
+    # 直すところ
+    # @vacation = Vacation.new(vacation_params)
+    # 直すところ
     respond_to do |format|
       if @hospital.save
         format.html { redirect_to @hospital, notice: 'hospital was successfully created.' }
