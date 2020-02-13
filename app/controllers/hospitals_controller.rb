@@ -28,9 +28,7 @@ class HospitalsController < ApplicationController
   # POST /hospitals.json
   def create
     @hospital = Hospital.new(hospital_params)
-    # 直すところ
-    # @vacation = Vacation.new(vacation_params)
-    # 直すところ
+    @vacation = Hospital.new{"vacations"}
     respond_to do |format|
       if @hospital.save
         format.html { redirect_to @hospital, notice: 'hospital was successfully created.' }
@@ -74,6 +72,6 @@ class HospitalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hospital_params
-      params.require(:hospital).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks, :postcode, :prefecture_code, :address_city, :address_street, :address_building, :twenty_four, vacation_attributes: [:id, :hospital_id, :consultation])
+      params.require(:hospital).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks, :postcode, :prefecture_code, :address_city, :address_street, :address_building, :twenty_four, vacation_attributes: [:id, :hospital_id, :consultation, vacationss:[]])
     end
 end
