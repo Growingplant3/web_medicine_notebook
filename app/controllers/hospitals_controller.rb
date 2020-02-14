@@ -16,6 +16,9 @@ class HospitalsController < ApplicationController
   def new
     @hospital = Hospital.new
     @hospital.vacations.build
+    %w(日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日).each.with_index do |day, i|
+      puts "key: #{i}, value: #{day}"
+    end
     # if @hospital.present?
   end
 
@@ -28,7 +31,9 @@ class HospitalsController < ApplicationController
   # POST /hospitals.json
   def create
     @hospital = Hospital.new(hospital_params)
-    @vacation = Hospital.new{"vacations"}
+    vacation = params["vacations"]
+      puts "------"
+      puts vacation
     respond_to do |format|
       if @hospital.save
         format.html { redirect_to @hospital, notice: 'hospital was successfully created.' }
