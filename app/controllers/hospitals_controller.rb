@@ -34,6 +34,13 @@ class HospitalsController < ApplicationController
     vacation = params["vacations"]
       puts "------"
       puts vacation
+      for num in 0..6 do
+        if vacation.include?(num)
+          puts num
+        else
+          puts 12345
+        end
+      end
     respond_to do |format|
       if @hospital.save
         format.html { redirect_to @hospital, notice: 'hospital was successfully created.' }
