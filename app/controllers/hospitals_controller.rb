@@ -32,13 +32,12 @@ class HospitalsController < ApplicationController
   def create
     @hospital = Hospital.new(hospital_params)
     vacation = params["vacations"]
-      puts "------"
       puts vacation
       for num in 0..6 do
-        if vacation.include?(num)
-          puts num
+        if vacation.include?(num.to_s)
+          puts 1
         else
-          puts 12345
+          puts 0
         end
       end
     respond_to do |format|
