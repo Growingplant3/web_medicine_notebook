@@ -38,6 +38,7 @@
     <%= form.select(:holiday, Hospital.holidays_i18n.invert) %>
   </div>
 
+  <!-- using field_for -->
   <div class="field">
     <% %w(日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日).each.with_index do |vacation, key| %>
       <label>

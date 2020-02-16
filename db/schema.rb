@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_02_10_161402) do
 
-  create_table "Hospitals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "hospitals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "address"
     t.string "telephone_number"
@@ -55,7 +55,8 @@ ActiveRecord::Schema.define(version: 2020_02_10_161402) do
 
   create_table "vacations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "hospital_id"
-    t.integer "consultation"
+    t.integer "week_day"
+    t.boolean "is_closed", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
