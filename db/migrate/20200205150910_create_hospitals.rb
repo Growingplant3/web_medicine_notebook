@@ -3,7 +3,6 @@ class CreateHospitals < ActiveRecord::Migration[6.0]
     create_table :hospitals do |t|
 
       t.string :name
-      t.text :address
       t.string :telephone_number
       t.string :mail_address
       t.integer :holiday

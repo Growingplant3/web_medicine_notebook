@@ -16,30 +16,54 @@
     <%= form.text_field :name %>
   </div>
 
-  <h2>住所</h2>
-  <p>郵便番号</p>
-  <%= form.text_field :postcode %>
-  <p>都道府県</p>
-  <%= form.text_field :prefecture_code, collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県' %><br>
-  <p>市町村</p>
-  <%= form.text_field :address_city %>
-  <p>詳細住所</p>
-  <%= form.text_field :address_street %>
-  <p>建物名など</p>
-  <%= form.text_field :address_building %>
+  <div class="field">
+    <%= form.label :郵便番号 %>
+    <%= form.text_field :postcode %>
+  </div>
+
+  <div class= "field">
+    <%= form.label :都道府県 %>
+    <%= form.text_field :prefecture_code, collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県' %><br>
+  </div>
+
+  <div class= "field">
+    <%= form.label :市町村 %>
+    <%= form.text_field :address_city %>
+  </div>
+
+  <div class= "field">
+    <%= form.label :詳細住所 %>
+    <%= form.text_field :address_street %>
+  </div>
+
+  <div class= "field">
+    <%= form.label :建物名など %>
+    <%= form.text_field :address_building %>
+  </div>
 
   <div class="field">
     <%= form.label :電話番号 %>
     <%= form.number_field :telephone_number %>
   </div>
 
-  <div class="field">
-    <%= form.label :休診日 %>
-    <%= form.select(:holiday, Hospital.holidays_i18n.invert) %>
-  </div>
-
   <!-- using field_for -->
   <div class="field">
+    <%= form.label :休診日 %>
+    #vacationsを定義　しかしhospitalに格納しないとダメか・・・
+    <% vacations = Vacation.where(hospital_id, hospital.id) %>
+  
+    #vacationsをvacationとして取り出して繰り返す。
+    <% vacations.each do |vacation| %>
+ 
+      #vacationのフォーム
+      <%= fields_for "vacations[]", vacation do |vf| %>
+
+      <% end %> #fields_for終わり
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :休診日 %>
     <% %w(日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日).each.with_index do |vacation, key| %>
       <label>
         <%= check_box_tag 'vacations[]', key, false, id:"hospital_vacations_#{vacation}"%>
@@ -54,6 +78,7 @@
   </div>
 
   <div class="field">
+    <a>24時間対応</a>
     <%#= form.label :24時間対応 %>
     <%= form.check_box :twenty_four, {}, "correct", "incorrect" %>
   </div>
