@@ -206,8 +206,8 @@ ja:
       short: "%m/%d %H:%M"
     pm: 午後
   enums:
-    hospital:
-      holiday:
+    vacation:
+      week_day:
         sunday: "日曜日"
         monday: "月曜日"
         tuesday: "火曜日"
@@ -215,6 +215,7 @@ ja:
         thursday: "木曜日"
         friday: "金曜日"
         saturday: "土曜日"
+    hospital:
       emergency:
         ng: 不可
         ok: 可

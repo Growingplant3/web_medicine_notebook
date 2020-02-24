@@ -34,7 +34,6 @@
         <td><%= hospital.address_building %></td>
         <td><%= hospital.telephone_number %></td>
         <td><%= hospital.mail_address %></td>
-        <td><%= hospital.holiday_i18n %></td>
         <% if hospital.open == hospital.close %>
           <td><%= hospital.twenty_four_i18n %></td>
           <td><%= hospital.open.strftime("%H:%M") if hospital.open.present? %></td>

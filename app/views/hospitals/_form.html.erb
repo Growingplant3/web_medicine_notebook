@@ -46,26 +46,11 @@
     <%= form.number_field :telephone_number %>
   </div>
 
-  <!-- using field_for -->
   <div class="field">
     <%= form.label :休診日 %>
-    #vacationsを定義　しかしhospitalに格納しないとダメか・・・
-    <%#= vacations = Vacation.where(hospital_id, hospital.id) %>
-    #vacationsをvacationとして取り出して繰り返す。
-    <%# vacations.each do |vacation| %>
-    #vacationのフォーム
-    #<%= fields_for "vacations[]", vacation do |vf| %>
-    #<% end %> #fields_for終わり
-    #<% end %>
-  </div>
-
-  <div class="field">
-    <%= form.label :休診日 %>
-    <% %w(日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日).each.with_index do |vacation, key| %>
-      <label>
-        <%= check_box_tag 'vacations[]', key, false, id:"hospital_vacations_#{vacation}"%>
-        <%= vacation %>
-      </label>
+    <%= form.fields_for :vacations do |vacation_f| %>
+    <%= vacation_f.text_field :week_day %>
+    <%= vacation_f.check_box(:is_closed) %>
     <% end %>
   </div>
 

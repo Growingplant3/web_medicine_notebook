@@ -15,11 +15,10 @@ class HospitalsController < ApplicationController
   # GET /hospitals/new
   def new
     @hospital = Hospital.new
-    @hospital.vacations.build
-    %w(日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日).each.with_index do |day, i|
-      puts "key: #{i}, value: #{day}"
+    #7.times {@hospital.vacations.build}
+    for num in 0..6 do
+      @hospital.vacations.build(week_day: num)
     end
-    # if @hospital.present?
   end
 
   # GET /hospitals/1/edit
@@ -31,14 +30,6 @@ class HospitalsController < ApplicationController
   # POST /hospitals.json
   def create
     @hospital = Hospital.new(hospital_params)
-    vacation = params["vacations"]
-      for num in 0..6 do
-        if vacation.include?(num.to_s)
-          puts 1
-        else
-          puts 0
-        end
-      end
     respond_to do |format|
       if @hospital.save
         format.html { redirect_to @hospital, notice: 'hospital was successfully created.' }
@@ -82,6 +73,6 @@ class HospitalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hospital_params
-      params.require(:hospital).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks, :postcode, :prefecture_code, :address_city, :address_street, :address_building, :twenty_four, vacation_attributes: [:id, :hospital_id, :week_day,:is_closed])
+      params.require(:hospital).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks, :postcode, :prefecture_code, :address_city, :address_street, :address_building, :twenty_four, vacations_attributes: [:id, :hospital_id, :week_day,:is_closed])
     end
 end
