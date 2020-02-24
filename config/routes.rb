@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   devise_for :users
   get 'pages/index'
   get 'pages/devise_test'
+  get 'pages/side_effect'
+  get 'pages/allergy'
+  get 'pages/sick'
+  get 'pages/operation'
   resources :hospitals
 end

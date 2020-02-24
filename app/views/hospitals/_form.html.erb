@@ -50,16 +50,13 @@
   <div class="field">
     <%= form.label :休診日 %>
     #vacationsを定義　しかしhospitalに格納しないとダメか・・・
-    <% vacations = Vacation.where(hospital_id, hospital.id) %>
-  
+    <%#= vacations = Vacation.where(hospital_id, hospital.id) %>
     #vacationsをvacationとして取り出して繰り返す。
-    <% vacations.each do |vacation| %>
- 
-      #vacationのフォーム
-      <%= fields_for "vacations[]", vacation do |vf| %>
-
-      <% end %> #fields_for終わり
-    <% end %>
+    <%# vacations.each do |vacation| %>
+    #vacationのフォーム
+    #<%= fields_for "vacations[]", vacation do |vf| %>
+    #<% end %> #fields_for終わり
+    #<% end %>
   </div>
 
   <div class="field">
