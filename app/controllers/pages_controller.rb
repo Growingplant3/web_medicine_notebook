@@ -5,6 +5,10 @@ class PagesController < ApplicationController
   def devise_test
   end
 
+  def new
+    @user = current_user
+  end
+
   def index
   end
 end

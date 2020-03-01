@@ -7,7 +7,8 @@
 			<div class="caption">
 				<h3>副作用歴/アレルギー歴</h3>
 				<p>病歴・手術歴なども、あなたが分かる範囲で記入する事ができます</p>
-				<p><a href="/pages/side_effect" class="btn btn-default" role="button" target="_blank">編集する</a></p>
+				#<p><a href="/pages/side_effect" class="btn btn-default" role="button" target="_blank">編集する</a></p>
+				<%= link_to "編集する",　pages_side_effect_path(@user.id) %>
 			</div>
 		</div>
 	</div>
