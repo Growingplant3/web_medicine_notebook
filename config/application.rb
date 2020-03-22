@@ -11,6 +11,7 @@ module WebMedicineNotebook
 
     # DNS Rebuilding for Rails6.0
     config.hosts << "lvh.me"
+    config.hosts << "cd3ab5e8a54c43ab9e351ff436dae3b7.vfs.cloud9.us-east-2.amazonaws.com"
 
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local

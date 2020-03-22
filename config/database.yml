@@ -7,7 +7,7 @@ development:
   database: web_medicine_notebook_development
   pool: 5
   username: root
-  password: Kichiplus6`c
+  password: 
   collation: utf8_general_ci
   host: 127.0.0.1
   port: 3306
