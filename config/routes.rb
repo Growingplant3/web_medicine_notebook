@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
   resources :vacations
-  resources :telphones
+  resources :hospitals
+  devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'hospitals/test'
   get 'hospitals/:id/edit' => 'hospitals#edit'
-  root "pages#index"
-  devise_for :users
   get 'pages/index'
   get 'pages/devise_test'
-  get 'pages/side_effect'
+  get 'users', to: 'users#index'
   get 'pages/allergy'
   get 'pages/sick'
   get 'pages/operation'
-  resources :hospitals
+  root "pages#index"
 end

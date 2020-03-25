@@ -1,4 +1,5 @@
 #require 'user'
+<%# 2020/3/29 undefiend error 'user' %>
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
