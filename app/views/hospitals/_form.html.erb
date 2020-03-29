@@ -46,11 +46,11 @@
     <%= form.number_field :telephone_number %>
   </div>
 
-  <%# 2020/3/29 undefined method `week_day_i18n' 休診日の表示・登録の修正 %>
+  # 2020/3/29 undefined method `week_day_i18n' 休診日の表示・登録の修正
   <div class="field">
-    <%= form.label :休診日 %>
+    <%= form.label :"休診日(休診日にチェックを入れる)" %></br>
     <%= form.fields_for :vacations do |vacation_f| %>
-    <%= vacation_f.text_field :week_day %>
+    <%= vacation_f.label :"Hospital.week_day_i18n" %>
     <%= vacation_f.check_box(:is_closed) %>
     <% end %>
   </div>

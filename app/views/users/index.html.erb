@@ -1,1 +1,24 @@
-<a>ここに副作用歴などの編集ページを作りたい</a>
+<h1>副作用履歴情報など</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>副作用履歴</th>
+      <th>アレルギー履歴</th>
+      <th>病歴</th>
+      <th>手術歴</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= current_user.side_effect %></td>
+        <td><%= current_user.allergy %></td>
+        <td><%= current_user.sick %></td>
+        <td><%= current_user.operation %></td>
+        <td><%= link_to '変更する', edit_user_path(current_user) %></td>
+        <td><%= link_to '削除する', @users, method: :delete, data: { confirm: '本当に削除しても良いですか?' } %></td>
+      </tr>
+  </tbody>
+</table>
