@@ -1,14 +1,12 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:index,:allergy, :show, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
   def index
-    @users = current_user
   end
   
   def allergy
-    @users = current_user
   end
 
   # GET /users/1

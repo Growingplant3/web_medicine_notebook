@@ -46,12 +46,28 @@
     <%= form.number_field :telephone_number %>
   </div>
 
-  # 2020/3/29 undefined method `week_day_i18n' 休診日の表示・登録の修正
   <div class="field">
     <%= form.label :"休診日(休診日にチェックを入れる)" %></br>
+    <% i = 0 %>
     <%= form.fields_for :vacations do |vacation_f| %>
-    <%= vacation_f.label :"Hospital.week_day_i18n" %>
-    <%= vacation_f.check_box(:is_closed) %>
+      <%= vacation_f.check_box(:is_closed,{},"kyushin","sninsatsu") %>
+      <% if i == 0 %>
+      <%= vacation_f.label :"日曜日" %>
+      <% elsif i == 1 %>
+          <%= vacation_f.label :"月曜日" %>
+      <% elsif i == 2 %>
+          <%= vacation_f.label :"火曜日" %>
+      <% elsif i == 3 %>
+          <%= vacation_f.label :"水曜日" %>
+      <% elsif i == 4 %>
+          <%= vacation_f.label :"木曜日" %>
+      <% elsif i == 5 %>
+          <%= vacation_f.label :"金曜日" %>
+      <% elsif i == 6 %>
+          <%= vacation_f.label :"土曜日" %>
+      <% end %>
+      <%# vacation_f.text_field(:week_day_i18n,readonly: true) %>
+      <% i = i + 1 %>
     <% end %>
   </div>
 

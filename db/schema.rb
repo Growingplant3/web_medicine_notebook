@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_25_145904) do
+ActiveRecord::Schema.define(version: 2020_03_29_145904) do
 
   create_table "hospitals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -29,10 +29,6 @@ ActiveRecord::Schema.define(version: 2020_03_25_145904) do
     t.time "open"
     t.time "close"
     t.boolean "twenty_four", default: false
-    t.text "side_effect"
-    t.text "allergy"
-    t.text "sick"
-    t.text "operation"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

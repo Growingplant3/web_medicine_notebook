@@ -13,12 +13,12 @@
 
   <tbody>
       <tr>
-        <td><%= current_user.side_effect %></td>
-        <td><%= current_user.allergy %></td>
-        <td><%= current_user.sick %></td>
-        <td><%= current_user.operation %></td>
-        <td><%= link_to '変更する', edit_user_path(current_user) %></td>
-        <td><%= link_to '削除する', @users, method: :delete, data: { confirm: '本当に削除しても良いですか?' } %></td>
+        <td><%= @user.side_effect %></td>
+        <td><%= @user.allergy %></td>
+        <td><%= @user.sick %></td>
+        <td><%= @user.operation %></td>
       </tr>
   </tbody>
 </table>
+
+<%= link_to '変更する', edit_user_path(@user) %>

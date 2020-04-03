@@ -43,7 +43,22 @@
 <p>
   <strong>休診日:</strong>
   <!-- enumで該当曜日を表示する -->
-  <%= @hospital.vacations %>
+  <table>
+    <tr>
+      <th>曜日</th>
+      <th>診察</th>
+    </tr>
+  <% @hospital.vacations.each do |vacation|%>
+  <tr>
+    <td>
+    <%= vacation.week_day_i18n %>
+    </td>
+    <td>
+    <%= vacation.is_closed_i18n %>
+    </td>
+    </tr>
+  <% end %>
+  </table>
 </p>
 
 <p>

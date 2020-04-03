@@ -215,10 +215,13 @@ ja:
         thursday: "木曜日"
         friday: "金曜日"
         saturday: "土曜日"
+      is_closed:
+        kyushin: "休診"
+        sninsatsu: "診察"
     hospital:
       emergency:
-        ng: 不可
-        ok: 可
+        ng: "不可"
+        ok: "可"
       twenty_four:
-        incorrect: 不可
-        correct: 可
+        incorrect: "不可"
+        correct: "可"
