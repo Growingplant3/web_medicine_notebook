@@ -6,6 +6,5 @@ class CreateHospitalClinicaldepartmentRelations < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    add_index :hos_cli_relations, [:hospital_id, :clinicaldepartment_id], unique: true, name: 'hos_cli_relations_index'
   end
 end
