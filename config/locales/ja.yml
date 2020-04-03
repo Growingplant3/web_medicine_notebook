@@ -225,3 +225,39 @@ ja:
       twenty_four:
         incorrect: "不可"
         correct: "可"
+  	user:
+  		sex: "性別"
+  		age: "年齢"
+  		weight: "体重"
+  	doctor:
+  		narcotic:
+  			other: "--"
+  			narcotic_approval: "麻薬処方可能"
+  			narcotic_disapproval: "麻薬処方不可能"
+  	clinicaldepartment:
+  		classification:
+  			other: "その他"
+  			cardiology: "循環器内科"
+  			respiratory: "呼吸器内科"
+  			gastroenterology: "消化器内科"
+  			hematology: "血液内科"
+  			metabolism: "内分泌内科"
+  			neurology: "神経内科"
+  			pediatrics: "小児科"
+  			psychiatry: "精神科"
+  			dermatology: "皮膚科"
+  			gastrointestinal: "消化器外科"
+  			orthopaedic: "整形外科"
+  			neurosurgery: "脳神経外科"
+  			otolaryngology: "耳鼻咽喉科"
+  			urology: "泌尿器科"
+  			ophthalmology: "眼科"
+  			anesthesiology: "麻酔科"
+  			plasticsurgery: "形成外科"
+  			dentistry: "歯科"
+  	pharmacist:
+  		authorized_pharmacist:
+  			other: "--"
+  			authorized: "かかりつけ薬剤師である"
+  			not_authorized: "かかりつけ薬剤師ではない"
+end

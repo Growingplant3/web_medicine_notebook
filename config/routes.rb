@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'clinicaldepartment/index'
+  get 'clinicaldepartment/new'
+  get 'clinicaldepartment/show'
+  get 'clinicaldepartment/edit'
+  get 'clinicaldepartment/create'
   # devise options explicitly specified（明示的にcontrollerとURLを指定）
   devise_for :users,controllers: {
     registrations: 'users/registrations',
