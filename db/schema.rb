@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_29_145904) do
+ActiveRecord::Schema.define(version: 2020_04_03_070748) do
+
+  create_table "clinicaldepartments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "classification"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hospital_clinicaldepartment_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "hospital_id"
+    t.bigint "clinicaldepartment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["clinicaldepartment_id"], name: "add_hos_cli_reelations2"
+    t.index ["hospital_id"], name: "add_hos_cli_reelations1"
+  end
 
   create_table "hospitals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -44,6 +59,9 @@ ActiveRecord::Schema.define(version: 2020_03_29_145904) do
     t.text "allergy"
     t.text "sick"
     t.text "operation"
+    t.integer "sex"
+    t.integer "age"
+    t.integer "weight"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -56,4 +74,6 @@ ActiveRecord::Schema.define(version: 2020_03_29_145904) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "hospital_clinicaldepartment_relations", "clinicaldepartments"
+  add_foreign_key "hospital_clinicaldepartment_relations", "hospitals"
 end
