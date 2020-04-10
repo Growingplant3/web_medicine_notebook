@@ -45,6 +45,55 @@
     <%= form.label :電話番号 %>
     <%= form.number_field :telephone_number %>
   </div>
+  
+  <div class="field">
+    <%= form.label :"診療科" %>
+    <%# 書き方が分からない %>
+    <% i = 0 %>
+    <%= form.fields_for :clinical_departments do |clinical_department_f| %></br>
+      <%= clinical_department_f.text_field(:classification,{},"other","cardiology","respiratory","gastroenterology","hematology","metabolism","neurology","pediatrics","psychiatry","dermatology","gastrointestinal","orthopaedic","neurosurgery","otolaryngology","urology","ophthalmology","anesthesiology","plasticsurgery","dentistry") %>
+      <%= if i == 0 %>
+        <% clinical_department_f.label :"その他" %>
+      <%= elsif i == 1 %>
+        <% clinical_department_f.label :"循環器内科" %>
+      <%= elsif i == 2 %>
+        <% clinical_department_f.label :"呼吸器科" %>
+      <%= elsif i == 3 %>
+        <% clinical_department_f.label :"消化器内科" %>
+      <%= elsif i == 4 %>
+        <% clinical_department_f.label :"血液内科" %>
+      <%= elsif i == 5 %>
+        <% clinical_department_f.label :"内分泌内科" %>
+      <%= elsif i == 6 %>
+        <% clinical_department_f.label :"神経内科" %>
+      <%= elsif i == 7 %>      
+        <% clinical_department_f.label :"小児科" %>
+      <%= elsif i == 8 %>
+        <% clinical_department_f.label :"精神科" %>
+      <%= elsif i == 9 %>
+        <% clinical_department_f.label :"皮膚科" %>
+      <%= elsif i == 10 %>
+        <% clinical_department_f.label :"消化器外科" %>
+      <%= elsif i == 11 %>
+        <% clinical_department_f.label :"整形外科" %>
+      <%= elsif i == 12 %>
+        <% clinical_department_f.label :"脳神経外科" %>
+      <%= elsif i == 13 %>
+        <% clinical_department_f.label :"耳鼻咽喉科" %>
+      <%= elsif i == 14 %>
+        <% clinical_department_f.label :"泌尿器科" %>
+      <%= elsif i == 15 %>
+        <% clinical_department_f.label :"眼科" %>
+      <%= elsif i == 16 %>
+        <% clinical_department_f.label :"麻酔科" %>
+      <%= elsif i == 17 %>
+        <% clinical_department_f.label :"形成外科" %>
+      <%= elsif i == 18 %>
+        <% clinical_department_f.label :"歯科" %>
+      <% end %>
+      <% i = i + 1 %>
+    <% end %>
+  </div>
 
   <div class="field">
     <%= form.label :"休診日(休診日にチェックを入れる)" %></br>
@@ -52,7 +101,7 @@
     <%= form.fields_for :vacations do |vacation_f| %>
       <%= vacation_f.check_box(:is_closed,{},"kyushin","sninsatsu") %>
       <% if i == 0 %>
-      <%= vacation_f.label :"日曜日" %>
+        <%= vacation_f.label :"日曜日" %>
       <% elsif i == 1 %>
           <%= vacation_f.label :"月曜日" %>
       <% elsif i == 2 %>

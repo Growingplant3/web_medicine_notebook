@@ -1,6 +1,7 @@
-class Clinicaldepartment < ApplicationRecord
-    # has_many :doctors, through: :doctorclinicaldepartmentrelations
-    has_many :hospitals, through: :hospital_clinicaldepartment_relations
+class ClinicalDepartment < ApplicationRecord
+    has_many :hospital_clinical_department_relations, dependent: :delete_all
+    has_many :hospitals, through: :hospital_clinical_department_relations
+
     # has_many :vacations, through:
     # accepts_nested_attributes_for :vacations
     enum calassification:{other:0,

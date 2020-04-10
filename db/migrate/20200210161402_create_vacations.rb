@@ -9,16 +9,5 @@ class CreateVacations < ActiveRecord::Migration[6.0]
       t.timestamps
     end
 
-    i = 1
-    1..7.times do
-      v = Vacation.new
-      v.week_day = i
-      if i == 1 || i == 7
-        v.is_closed = false
-      end
-      i = i + 1
-      v.save
-    end
-
   end
 end

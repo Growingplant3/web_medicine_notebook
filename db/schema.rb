@@ -12,19 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2020_04_03_070748) do
 
-  create_table "clinicaldepartments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "clinical_departments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "classification"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "hospital_clinicaldepartment_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "hospital_clinical_department_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "hospital_id"
-    t.bigint "clinicaldepartment_id"
+    t.bigint "clinical_department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["clinicaldepartment_id"], name: "add_hos_cli_reelations2"
-    t.index ["hospital_id"], name: "add_hos_cli_reelations1"
+    t.index ["clinical_department_id"], name: "add_hos_cli_relations2"
+    t.index ["hospital_id"], name: "add_hos_cli_relations1"
   end
 
   create_table "hospitals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -55,13 +55,13 @@ ActiveRecord::Schema.define(version: 2020_04_03_070748) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
+    t.integer "sex"
+    t.integer "age"
+    t.integer "weight"
     t.text "side_effect"
     t.text "allergy"
     t.text "sick"
     t.text "operation"
-    t.integer "sex"
-    t.integer "age"
-    t.integer "weight"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -74,6 +74,6 @@ ActiveRecord::Schema.define(version: 2020_04_03_070748) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "hospital_clinicaldepartment_relations", "clinicaldepartments"
-  add_foreign_key "hospital_clinicaldepartment_relations", "hospitals"
+  add_foreign_key "hospital_clinical_department_relations", "clinical_departments"
+  add_foreign_key "hospital_clinical_department_relations", "hospitals"
 end
