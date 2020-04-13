@@ -4,7 +4,7 @@ class ClinicalDepartment < ApplicationRecord
 
     # has_many :vacations, through:
     # accepts_nested_attributes_for :vacations
-    enum calassification:{other:0,
+    enum classification:{other:0,
 	    cardiology:1,
 	    respiratory:2,
 	    gastroenterology:3,

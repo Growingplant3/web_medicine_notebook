@@ -234,7 +234,7 @@ ja:
       other: "--"
       narcotic_approval: "麻薬処方可能"
       narcotic_disapproval: "麻薬処方不可能"
-    clinicaldepartment:
+    clinical_department:
       classification:
         other: "その他"
         cardiology: "循環器科"
