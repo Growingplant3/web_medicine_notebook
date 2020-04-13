@@ -47,9 +47,9 @@
   </div>
   
   <div class="field">
-    <a>診療科</a><br/>
+    <%= form.label :診療科 %>
     <%= form_for @hospital do |f| %>
-      <%= f.collection_check_boxes(:clinical_department_ids, @clinical_department, :id, :classification_i18n) do |t| %>
+      <%= f.collection_check_boxes(:clinical_department_ids, ClinicalDepartment.all, :id, :classification_i18n) do |t| %>
         <%= t.label { t.check_box + t.text } %>
       <% end %>
     <% end %>

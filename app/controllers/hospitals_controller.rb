@@ -19,14 +19,7 @@ class HospitalsController < ApplicationController
     for num in 0..6 do
       @hospital.vacations.build(week_day: num)
     end
-    @clinical_department = ClinicalDepartment.all
-    # 19.times do |make|
-    #  make = ClinicalDepartment.new
-    #  @clinical_department += make
-    # end
-    # for kazu in 0..18 do
-    # @hospital.clinical_departments.build(classification: kazu)
-    # end
+    @hospital.hospital_clinical_department_relations.build
   end
 
   # GET /hospitals/1/edit
@@ -47,6 +40,7 @@ class HospitalsController < ApplicationController
         format.json { render json: @hospital.errors, status: :unprocessable_entity }
       end
     end
+    @hospital.hospital_clinical_department_relations.build
   end
 
   # PATCH/PUT /hospitals/1
@@ -81,6 +75,6 @@ class HospitalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hospital_params
-      params.require(:hospital).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks, :postcode, :prefecture_code, :address_city, :address_street, :address_building, :twenty_four, vacations_attributes: [:id, :hospital_id, :week_day,:is_closed], clinical_departments_ids: [])
+      params.require(:hospital).permit(:name, :address, :telephone_number, :mail_address, :holiday, :open, :close, :emergency, :remarks, :postcode, :prefecture_code, :address_city, :address_street, :address_building, :twenty_four, vacations_attributes: [:id, :hospital_id, :week_day,:is_closed], :clinical_department_ids => [])
     end
 end
