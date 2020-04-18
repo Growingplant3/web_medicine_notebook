@@ -42,19 +42,14 @@
 
 <p>
   <strong>診療科:</strong>
-  <!-- enumで該当診療科を表示する（存在するものだけ） -->
   <table>
-    <tr>
-      <th>aaaa</th>
-      <th>bbbb</th>
-    </tr>
-  <% @hospital.clinical_departments.each do |clinical_departments| %>
-    <tr>
-      <td>
-        <%= clinical_departments.classification_i18n %>
-      </td>
-    </tr>
-  <% end %>
+    <% @hospital.clinical_departments.each do |clinical_departments| %>
+      <tr>
+        <td>
+          <%= clinical_departments.classification_i18n %>
+        </td>
+      </tr>
+    <% end %>
   </table>
 </p>
 
@@ -77,6 +72,11 @@
     </tr>
   <% end %>
   </table>
+</p>
+
+<p>
+  <strong>24時間対応:</strong>
+  <%= @hospital.twenty_four_i18n %>
 </p>
 
 <p>

@@ -47,17 +47,35 @@
   </div>
   
   <div class="field">
-    <%= form.label :診療科 %>
-    <%= form_for @hospital do |f| %>
-      <%= f.collection_check_boxes(:clinical_department_ids, ClinicalDepartment.all, :id, :classification_i18n) do |t| %>
-        <%= t.label { t.check_box + t.text } %>
-      <% end %>
-    <% end %>
-  </div>
-  
-  <div class="field">
     <%= form.label :メールアドレス %>
     <%= form.text_field :mail_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :診療科 %><br/>
+    <%= form.collection_check_boxes(:clinical_department_ids, ClinicalDepartment.all, :id, :classification_i18n) do |t| %>
+      <%= t.label { t.check_box + t.text } %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :休診日 %><br/>
+    <%= form.fields_for :vacation do |vacation_form| %>
+      <%= vacation_form.check_box :is_closed %>
+      <%= vacation_form.label :日曜日 %>
+      <%= vacation_form.check_box :is_closed %>
+      <%= vacation_form.label :月曜日 %>
+      <%= vacation_form.check_box :is_closed %>
+      <%= vacation_form.label :火曜日 %>
+      <%= vacation_form.check_box :is_closed %>
+      <%= vacation_form.label :水曜日 %>      
+      <%= vacation_form.check_box :is_closed %>
+      <%= vacation_form.label :木曜日 %>
+      <%= vacation_form.check_box :is_closed %>
+      <%= vacation_form.label :金曜日 %>
+      <%= vacation_form.check_box :is_closed %>
+      <%= vacation_form.label :土曜日 %>
+    <% end %>
   </div>
 
   <div class="field">

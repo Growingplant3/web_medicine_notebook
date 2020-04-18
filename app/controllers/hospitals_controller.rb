@@ -19,7 +19,7 @@ class HospitalsController < ApplicationController
     for num in 0..6 do
       @hospital.vacations.build(week_day: num)
     end
-    @hospital.hospital_clinical_department_relations.build
+     # @hospital.hospital_clinical_department_relations.build
   end
 
   # GET /hospitals/1/edit
@@ -40,7 +40,7 @@ class HospitalsController < ApplicationController
         format.json { render json: @hospital.errors, status: :unprocessable_entity }
       end
     end
-    @hospital.hospital_clinical_department_relations.build
+    # @hospital.hospital_clinical_department_relations.build
   end
 
   # PATCH/PUT /hospitals/1
