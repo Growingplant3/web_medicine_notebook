@@ -12,8 +12,7 @@ module WebMedicineNotebook
     # DNS Rebuilding for Rails6.0
     config.hosts << "lvh.me"
     config.hosts << "cd3ab5e8a54c43ab9e351ff436dae3b7.vfs.cloud9.us-east-2.amazonaws.com"
-
-    config.time_zone = 'Tokyo'
+    config.time_zone = 'Asia/Tokyo'
     config.active_record.default_timezone = :local
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ja

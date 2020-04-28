@@ -117,6 +117,7 @@ GEM
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
+    hashie (4.1.0)
     hirb (0.7.3)
     hirb-unicode (0.0.5)
       hirb (~> 0.5)
@@ -166,6 +167,16 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
+    oauth (0.5.4)
+    omniauth (1.9.1)
+      hashie (>= 3.4.6)
+      rack (>= 1.6.2, < 3)
+    omniauth-oauth (1.1.0)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     orm_adapter (0.5.0)
     popper_js (1.16.0)
     pry (0.12.2)
@@ -321,6 +332,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4)
+  omniauth-twitter
   pry-byebug
   pry-rails
   puma (~> 4.1)

@@ -5,9 +5,11 @@ ruby '2.6.4'
 
 # ログイン機能
 gem 'devise'
+
 # 管理者機能
 gem 'rails_admin'
 gem 'cancancan'
+
 gem 'pry-rails'
 gem 'pry-byebug'
 
