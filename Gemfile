@@ -3,6 +3,35 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.4'
 
+# ログイン機能
+gem 'devise'
+
+# 管理者機能
+gem 'rails_admin'
+gem 'cancancan'
+
+gem 'pry-rails'
+gem 'pry-byebug'
+
+gem 'hirb'
+gem 'hirb-unicode'
+
+# 日本語化
+gem 'rails-i18n', '~> 6.0'
+gem 'devise-i18n'
+
+gem 'sassc', '~> 2.0.0'
+gem 'uglifier'
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.1.3'
+gem 'enum_help'
+gem 'jp_prefecture'
+
+# Bootstrap
+gem 'devise-bootstrap-views', '~> 1.0'
+gem 'devise-i18n-views'
+gem 'bootstrap-sass'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 # Use mysql as the database for Active Record
@@ -40,6 +69,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do

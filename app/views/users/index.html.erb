@@ -1,0 +1,24 @@
+<h1>副作用履歴情報など</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>副作用履歴</th>
+      <th>アレルギー履歴</th>
+      <th>病歴</th>
+      <th>手術歴</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @user.side_effect %></td>
+        <td><%= @user.allergy %></td>
+        <td><%= @user.sick %></td>
+        <td><%= @user.operation %></td>
+      </tr>
+  </tbody>
+</table>
+
+<%= link_to '変更する', edit_user_path(@user) %>

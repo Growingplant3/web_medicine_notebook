@@ -1,0 +1,18 @@
+=> [32m#<Hospital:0x0000000004de2cc8[0m
+ id: [1;36mnil[0m,
+ name: [1;36mnil[0m,
+ telephone_number: [1;36mnil[0m,
+ mail_address: [1;36mnil[0m,
+ holiday: [1;36mnil[0m,
+ emergency: [1;36mnil[0m,
+ remarks: [1;36mnil[0m,
+ created_at: [1;36mnil[0m,
+ updated_at: [1;36mnil[0m,
+ postcode: [1;36mnil[0m,
+ prefecture_code: [1;36mnil[0m,
+ address_city: [1;36mnil[0m,
+ address_street: [1;36mnil[0m,
+ address_building: [1;36mnil[0m,
+ open: [1;36mnil[0m,
+ close: [1;36mnil[0m,
+ twenty_four: [31m[1;31m"[0m[31mincorrect[1;31m"[0m[31m[0m[32m>[0m

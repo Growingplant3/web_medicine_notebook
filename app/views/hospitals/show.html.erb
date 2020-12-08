@@ -1,0 +1,103 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>病院名:</strong>
+  <%= @hospital.name %>
+</p>
+
+<p>
+  <strong>郵便番号:</strong>
+  <%= @hospital.postcode %>
+</p>
+
+<p>
+  <strong>都道府県:</strong>
+  <%= @hospital.prefecture_code %>
+</p>
+
+<p>
+  <strong>市町村:</strong>
+  <%= @hospital.address_city %>
+</p>
+
+<p>
+  <strong>詳細住所:</strong>
+  <%= @hospital.address_street %>
+</p>
+
+<p>
+  <strong>建物など:</strong>
+  <%= @hospital.address_building %>
+</p>
+
+<p>
+  <strong>電話番号:</strong>
+  <%= @hospital.telephone_number %>
+</p>
+
+<p>
+  <strong>メールアドレス:</strong>
+  <%= @hospital.mail_address %>
+</p>
+
+<p>
+  <strong>診療科:</strong>
+  <table>
+    <% @hospital.clinical_departments.each do |clinical_departments| %>
+      <tr>
+        <td>
+          <%= clinical_departments.classification_i18n %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</p>
+
+<p>
+  <strong>休診日:</strong>
+  <!-- enumで曜日を表示する（7種類のboolean） -->
+  <table>
+    <tr>
+      <th>曜日</th>
+      <th>診察</th>
+    </tr>
+  <% @hospital.vacations.each do |vacation|%>
+  <tr>
+    <td>
+    <%= vacation.week_day_i18n %>
+    </td>
+    <td>
+    <%= vacation.is_closed_i18n %>
+    </td>
+    </tr>
+  <% end %>
+  </table>
+</p>
+
+<p>
+  <strong>24時間対応:</strong>
+  <%= @hospital.twenty_four_i18n %>
+</p>
+
+<p>
+  <strong>診察開始:</strong>
+  <%= @hospital.open.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>診察終了:</strong>
+  <%= @hospital.close.strftime("%H:%M") %>
+</p>
+
+<p>
+  <strong>急患対応:</strong>
+  <%= @hospital.emergency_i18n %>
+</p>
+
+<p>
+  <strong>備考:</strong>
+  <%= @hospital.remarks %>
+</p>
+
+<%= link_to '編集する', edit_hospital_path(@hospital) %> |
+<%= link_to '戻る', hospitals_path %>

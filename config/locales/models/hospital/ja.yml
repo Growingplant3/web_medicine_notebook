@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザ情報
+    attributes:
+      hospital:
+        emergency: 急患対応
+  enums:
+    user:
+      sex_type:
+        true:可
+        false:不可
